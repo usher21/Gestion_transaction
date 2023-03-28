@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container dflex jcc aic fdc">
+        <div class="card">
+            <div class="infos dflex">
+                <div class="info flex2 dflex fdc jcsb">
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Nom :</span>
+                        <span class="data" id="lastname">...</span>
+                    </div>
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Prénom :</span>
+                        <span class="data" id="firstname">...</span>
+                    </div>
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Téléphone :</span>
+                        <span class="data" id="phone">...</span>
+                    </div>
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Email :</span>
+                        <span class="data" id="email">...</span>
+                    </div>
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Solde :</span>
+                        <span class="data" id="solde">...</span>
+                    </div>
+                </div>
+                <div class="photo flex1">
+                    <img src="..." alt="...">
+                </div>
+            </div>
+            <hr>
+            <div class="transactions dflex fdc">
+                <div class="title" style="flex: 3;">
+                    <span>Transactions (<code>...</code>)</span>
+                    <span id="btnDetail" class="btn-detail">+</span>
+                </div>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Numero</th>
+                                <th>Date</th>
+                                <th>Sens</th>
+                                <th>Montant</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="form">
+                <div class="form-group">
+                    <label for="mnt">Montant</label>
+                    <input type="number" id="mnt" placeholder="Montant..." class="from-control">
+                </div>
+                <div class="form-group">
+                    <label for="trans">Transaction</label>
+                    <select id="trans" class="from-control">
+                        <option value="d">Depot</option>
+                        <option value="r">Retrait</option>
+                        <option value="e">Envoie</option>
+                    </select>
+                </div>
+                <button type="button">Enregistrer</button>
+            </div>
+        </div>
+        <div class="navigation">
+            <button type="button" class="next"> suivant </button>
+        </div>
+    </div>
+
+    <div class="alert"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
