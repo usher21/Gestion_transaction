@@ -7,8 +7,13 @@
     <title>S01</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dflex jcs aic">
     <div class="container dflex jcc aic fdc">
+        <div class="open-modal">+</div>
+        <div class="search-client-container">
+            <input type="text" id="search-client" placeholder="Rechercher un client">
+            <ul class="list-result-client"></ul>
+        </div>
         <div class="card">
             <div class="infos dflex">
                 <div class="info flex2 dflex fdc jcsb">
@@ -34,9 +39,11 @@
                     </div>
                 </div>
                 <div class="photo flex1">
-                    <img src="..." alt="...">
+                    <!-- <img src="..." alt="..."> -->
+                    <!-- <div class="choose-image">Choose an image</div> -->
                 </div>
             </div>
+            <input type="file" id="upload-file">
             <hr>
             <div class="transactions dflex fdc">
                 <div class="title" style="flex: 3;">
@@ -65,18 +72,27 @@
                     </table>
                 </div>
             </div>
-            <div class="form">
-                <div class="form-group">
+            <div class="form dflex fdc">
+                <div class="form-group dflex fdc">
                     <label for="mnt">Montant</label>
                     <input type="number" id="mnt" placeholder="Montant..." class="from-control">
                 </div>
-                <div class="form-group">
+                <div class="form-group dflex fdc">
                     <label for="trans">Transaction</label>
                     <select id="trans" class="from-control">
                         <option value="d">Depot</option>
                         <option value="r">Retrait</option>
-                        <option value="e">Envoie</option>
                     </select>
+                </div>
+                <div class="form-group dflex fdc">
+                    <label for="tel">Téléphone</label>
+                    <input type="text" id="tel" placeholder="Téléphone..." class="from-control">
+                </div>
+                <div class="search-result dflex fdc">
+                    <div class="result-item">
+                        <div class="name">Bamba</div>
+                        <div class="tel">706679832</div>
+                    </div>
                 </div>
                 <button type="button">Enregistrer</button>
             </div>
@@ -87,6 +103,51 @@
     </div>
 
     <div class="alert"></div>
+
+    <div class="modal-container hide">
+        <div class="modal">
+            <div class="modal-header">Ajout de client</div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="client-firstname">Prénom: </label>
+                    <input type="text" id="client-firstname" placeholder="Prénom..." class="from-control">
+                    <span class="firstname-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="client-lastname">Nom: </label>
+                    <input type="text" id="client-lastname" placeholder="Nom..." class="from-control">
+                    <span class="lastname-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="client-email">Email: </label>
+                    <input type="text" id="client-email" placeholder="Email..." class="from-control">
+                    <span class="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="client-phone">Téléphone</label>
+                    <input type="text" id="client-phone" placeholder="Téléphone..." class="from-control">
+                    <span class="phone-error"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="save">Enregistrer</button>
+                <button class="cancel">Annuler</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-confirm-container hide">
+        <div class="confirm-modal">
+            <header class="modal-header">Voulez-vous vraiment annuler cette Transaction ?</header>
+            <section class="">
+    
+            </section>
+            <section class="modal-footer">
+                <button class="no">Non</button>
+                <button class="yes">Oui</button>
+            </section>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
